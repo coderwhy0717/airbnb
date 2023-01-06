@@ -11,4 +11,11 @@ export const HomeWrapper = styled.div`
     margin: 0 auto;
     padding: 0 24px;
   }
+  .hosuecover-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
 `

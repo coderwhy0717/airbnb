@@ -4,16 +4,21 @@ export const NavcitysWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  .boxleft {
+  }
   .icon {
     position: absolute;
+    top: calc(62% - 28px);
     left: -8px;
     padding: 8px;
     box-shadow: 0 1px 1px 1px #ccc;
     border-radius: 50%;
     background-color: #fff;
     cursor: pointer;
+    ${(props) => props.theme.mixin.boxShadow}
   }
   .xuying {
+    margin-top: -36px;
     position: absolute;
     height: 68px;
     width: 38px;
@@ -27,14 +32,18 @@ export const NavcitysWrapper = styled.div`
   }
   .icon-right {
     position: absolute;
+    top: calc(62% - 28px);
     right: -20px;
     padding: 8px;
     box-shadow: 0 1px 1px 1px #ccc;
     border-radius: 50%;
     background-color: #fff;
     cursor: pointer;
+    ${(props) => props.theme.mixin.boxShadow}
   }
   .xuanying-right {
+    margin-top: -36px;
+
     position: absolute;
     right: -10px;
     height: 68px;
@@ -61,6 +70,7 @@ export const NavcitysWrapper = styled.div`
     }
 
     .item {
+      user-select: none;
       min-width: 120px;
       font-size: 17px;
       font-weight: 600;
@@ -73,7 +83,7 @@ export const NavcitysWrapper = styled.div`
       text-align: center;
       ${(props) => props.theme.mixin.boxShadow}
       &:last-child {
-        margin-right: 100px;
+        margin-right: 68px;
       }
     }
     .cover {
