@@ -1,11 +1,8 @@
-import React, { Fragment, memo } from 'react'
+import React, { memo } from 'react'
+import { DetailWrapper } from './style'
 
-const Drtail = memo(() => {
-  return (
-    <Fragment>
-      <div>Drtail</div>
-    </Fragment>
-  )
+const Detail = memo(() => {
+  return <DetailWrapper>a</DetailWrapper>
 })
 
-export default Drtail
+export default Detail

@@ -5,6 +5,8 @@ import { HashRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux'
 import store from './store'
+//适配屏幕
+// import 'lib-flexible/flexible.js'
 
 import 'normalize.css'
 import '@/asstes/css/index.less'

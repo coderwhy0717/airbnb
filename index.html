@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 250px;
+        height: 250px;
+        margin: 100px auto;
+        background-color: red;
+
+        animation: am1 2s linear infinite alternate 1s; /* 动画持续时间 匀速 运动次数(循环) alternate(往返运动)  1s(延迟)*/
+
+        /* 详细属性 */
+      }
+
+      .box:hover {
+        animation-play-state: paused; /* 动画状态 paused(暂停) running(播放) */
+      }
+
+      @keyframes am1 {
+        0% {
+          /* 或者写成这样:  from {} */
+          width: 250px;
+          height: 250px; /* 多个属性相当于多组动画一起执行 */
+        }
+
+        100% {
+          /* 或者写成这样:  to {} */
+          width: 500px;
+          height: 500px;
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

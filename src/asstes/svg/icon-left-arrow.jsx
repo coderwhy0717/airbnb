@@ -1,7 +1,10 @@
 import React, { Fragment, memo } from 'react'
 import { styleToObject } from './utils'
+import PropTypes from 'prop-types'
 
-const IconLeftArrow = memo(() => {
+const IconLeftArrow = memo((props) => {
+  const { height = 12, width = 12 } = props
+
   return (
     <Fragment>
       <div>
@@ -12,7 +15,7 @@ const IconLeftArrow = memo(() => {
           aria-label="previous"
           focusable="false"
           style={styleToObject(
-            'height: 12px; width: 12px; display: block; fill: currentcolor;'
+            `height: ${height}px; width: ${width}px; display: block; fill: currentcolor;`
           )}
         >
           <path
@@ -24,5 +27,8 @@ const IconLeftArrow = memo(() => {
     </Fragment>
   )
 })
-
+IconLeftArrow.propTypes = {
+  height: PropTypes.number,
+  width: PropTypes.number
+}
 export default IconLeftArrow

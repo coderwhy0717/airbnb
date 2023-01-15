@@ -1,10 +1,12 @@
-import React, { Fragment, memo } from 'react'
+import React, { memo } from 'react'
+
+import { NotFoundWrapper } from './style'
 
 const NotFound = memo(() => {
   return (
-    <Fragment>
-      <div>NotFound</div>
-    </Fragment>
+    <NotFoundWrapper>
+      <div className="box">NotFound</div>
+    </NotFoundWrapper>
   )
 })
 

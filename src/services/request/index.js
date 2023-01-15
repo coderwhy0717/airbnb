@@ -34,7 +34,7 @@ class WYRequest {
       this.instance
         .request(config)
         .then((res) => {
-          console.log(res.data)
+          // console.log(res.data)
           reslove(res.data)
         })
         .catch((err) => {

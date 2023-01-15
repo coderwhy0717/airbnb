@@ -19,13 +19,13 @@ const NavCitysBtn = memo((props) => {
   const changeLeft = () => {
     console.log(itemRef)
     itemRef.current.scrollTo({
-      left: itemRef.current.scrollLeft - 272,
+      left: itemRef.current.scrollLeft - 138,
       behavior: 'smooth'
     })
   }
   const changeRight = () => {
     console.log(itemRef)
-    let distance = itemRef.current.scrollLeft + 272
+    let distance = itemRef.current.scrollLeft + 138
     itemRef.current.scrollTo({
       left: distance,
       behavior: 'smooth'
@@ -44,6 +44,7 @@ const NavCitysBtn = memo((props) => {
       ) : (
         ''
       )}
+
       <div className="content" ref={itemRef}>
         {citys?.map((item, index) => {
           return (
@@ -57,6 +58,7 @@ const NavCitysBtn = memo((props) => {
           )
         })}
       </div>
+
       {isReach ? (
         ''
       ) : (
