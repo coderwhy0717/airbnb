@@ -1,19 +1,24 @@
 // import PropTypes from 'prop-types'
-import HouseCover from '@/components/house-cover'
-import { objectChange } from '@/utils/object-change'
-import React, { Fragment, memo } from 'react'
-import { useSelector, shallowEqual } from 'react-redux'
+import HouseCover from "@/components/house-cover";
+import { objectChange } from "@/utils/object-change";
+import React, { Fragment, memo, useCallback } from "react";
+import { useSelector, shallowEqual } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-import { ContentWrapper } from './style'
+import { ContentWrapper } from "./style";
 
 const EntireContent = memo((props) => {
   const { entireList, totalCount } = useSelector(
     (state) => ({
       entireList: state.entire.entireList,
-      totalCount: state.entire.totalCount
+      totalCount: state.entire.totalCount,
     }),
     shallowEqual
-  )
+  );
+  const navigate = useNavigate();
+  const changeItemFn = useCallback(() => {
+    navigate("/detail");
+  }, [navigate]);
 
   return (
     <ContentWrapper>
@@ -41,15 +46,22 @@ const EntireContent = memo((props) => {
           {/*   items */}
           <div className="slides">
             {entireList.map((item) => {
-              return <HouseCover key={item._id} itemData={item} width={'20%'} />
+              return (
+                <HouseCover
+                  changeItemFn={changeItemFn}
+                  key={item._id}
+                  itemData={item}
+                  width={"20%"}
+                />
+              );
             })}
           </div>
         </Fragment>
       )}
     </ContentWrapper>
-  )
-})
+  );
+});
 
-EntireContent.propTypes = {}
+EntireContent.propTypes = {};
 
-export default EntireContent
+export default EntireContent;

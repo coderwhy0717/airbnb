@@ -9,6 +9,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux'
 
 import { EntireWrapper } from './style'
+import LoadingAnimation from '@/components/loading-animation'
 
 const Entire = memo(() => {
   useEffect(() => {
@@ -29,15 +30,11 @@ const Entire = memo(() => {
   return (
     <EntireWrapper showEntireLoading={showEntireLoading} show={totalCount}>
       {/* loading */}
-      {!showEntireLoading && (
-        <div className="showEntireLoading">
-          <span className="item item1"></span>
-          <span className="item item2"></span>
-          <span className="item item3"></span>
-        </div>
-      )}
+
+      {!showEntireLoading && <LoadingAnimation />}
       <EntireHeadeLabel />
       <EntireContent />
+
       {!!totalCount && <EntireSorter totalCount={totalCount / 20} />}
     </EntireWrapper>
   )

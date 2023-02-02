@@ -52,6 +52,7 @@ export const HRightWrapper = styled.div`
     background-color: #fff;
     box-shadow: 0px 0px 3px #ccc;
     font-weight: 500;
+    z-index: 9999;
     .login {
       border-bottom: 1px solid #ccc;
       padding-bottom: 8px;

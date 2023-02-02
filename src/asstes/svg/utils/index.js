@@ -1,3 +1,4 @@
+// svg的 css 转化
 export function styleToObject(styleStr) {
   const obj = {}
   const s = styleStr

@@ -8,7 +8,7 @@ export const IndicatorWrapper = styled.div`
     position: relative;
     display: flex;
     align-items: center;
-    height: 20px;
+    ${(props) => (props.aotuHeight ? 'height: 20px;' : '')}
 
     transition: transform 250ms ease;
 

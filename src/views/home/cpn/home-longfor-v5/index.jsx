@@ -12,7 +12,7 @@ const HomeLongForV5 = memo((props) => {
       <NavTitle title={longFor.title} describe={longFor.subtitle} />
 
       <div className="box-longfor">
-        <ScrollView showBgc={0} shadow={1}>
+        <ScrollView shadow={1}>
           {longFor.list.map((item, index) => {
             return <LongForItem key={index} itemData={item} />
           })}

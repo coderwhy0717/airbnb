@@ -10,7 +10,7 @@ const HouseFrame = memo((props) => {
   return (
     <HouseFrameWrapper>
       {/* Scroll 具名插槽  showBgc={0} false 阴影去掉*/}
-      <Scroll showBgc={0}>
+      <Scroll>
         {houseList.map((item) => {
           return <HouseCover key={item.id} itemData={item} width={width} />
         })}

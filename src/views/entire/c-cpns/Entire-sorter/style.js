@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const SorterWrapper = styled.div`
   display: flex;
@@ -18,4 +18,4 @@ export const SorterWrapper = styled.div`
       color: #717171;
     }
   }
-`
+`;

@@ -6,7 +6,7 @@ import IconLeftArrow from '@/asstes/svg/icon-left-arrow'
 import IconRightArrow from '@/asstes/svg/icon-right-arrow'
 const ScrollView = memo((props) => {
   // 1 显示 0 不显示 bgc  shadowPosition 按钮的定位
-  const { showBgc = 1, shadow = 0 } = props
+  const { showBgc = 0, shadow = 0 } = props
   const itemRef = useRef()
 
   const currentindexRef = useRef(0)
@@ -72,7 +72,8 @@ const ScrollView = memo((props) => {
 })
 
 ScrollView.prototype = {
-  showBgc: PropTypes.number
+  showBgc: PropTypes.number,
+  shadow: PropTypes.number
 }
 
 export default ScrollView

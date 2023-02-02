@@ -10,8 +10,11 @@
  body {
   box-sizing: border-box;
   font-family: 'Circular', 'PingFang-SC', "Hiragino Sans GB", '微软雅黑', "Microsoft YaHei", "Heiti SC" ;
+
  }
 img {
   border: 0;/* 为了照顾低版本浏览器,如果 图片的外面包含了链接 会出现边框的问题 */
-	vertical-align: middle /* 解决图片底侧出现空白缝隙的问题 */
+	vertical-align: middle !important; /* 解决图片底侧出现空白缝隙的问题 */
+  object-fit: cover;
+
 }

@@ -3,7 +3,7 @@ import React, { memo, useEffect, useRef } from 'react'
 import { IndicatorWrapper } from './style'
 
 const IndicatorView = memo((props) => {
-  const { currentIndex = 0, width = 50 } = props
+  const { currentIndex = 0, width = 50, aotuHeight = true } = props
   const itemRef = useRef()
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const IndicatorView = memo((props) => {
     itemRef.current.style.transform = `translateX(${-distance}px)`
   }, [currentIndex])
   return (
-    <IndicatorWrapper width={width}>
+    <IndicatorWrapper width={width} aotuHeight={aotuHeight}>
       <div className="wrapper" ref={itemRef}>
         {props.children}
       </div>
@@ -33,7 +33,7 @@ const IndicatorView = memo((props) => {
 
 IndicatorView.propTypes = {
   currentIndex: PropTypes.number,
-  width: PropTypes.number
+  width: PropTypes.any
 }
 
 export default IndicatorView

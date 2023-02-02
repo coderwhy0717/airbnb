@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { fetchEntireDataAction } from '@/store/modules/entire'
 import { createTheme, Pagination, ThemeProvider } from '@mui/material'
 import { Stack } from '@mui/system'
-import React, { memo, useRef, useState } from 'react'
+import React, { memo, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { SorterWrapper } from './style'
 

@@ -8,11 +8,11 @@ import IconLeftArrow from '@/asstes/svg/icon-left-arrow'
 import IconRightArrow from '@/asstes/svg/icon-right-arrow'
 import IndicatorView from '../indicator-view'
 import classNames from 'classnames'
-import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { changeHouseDetailAction } from '@/store/modules/detail'
 const HouseCover = memo((props) => {
-  const { itemData = {}, width = '25%' } = props
+  const { itemData = {}, width = '25%', changeItemFn } = props
   const slideRef = useRef()
-  const navigate = useNavigate()
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const changeclick = (value = true) => {
@@ -37,9 +37,12 @@ const HouseCover = memo((props) => {
     console.log(from, to, 'current')
     setCurrentIndex(to)
   }
+  const dispatch = useDispatch()
   const changeItem = (data) => {
-    console.log(data, '点击')
-    navigate('/detail')
+    // console.log(data, "点击");
+    window.localStorage.setItem('housedetail', JSON.stringify(data))
+    dispatch(changeHouseDetailAction(data))
+    changeItemFn()
   }
   return (
     <HouseCoverWrapper
@@ -107,6 +110,7 @@ const HouseCover = memo((props) => {
               })}
             </IndicatorView>
           </div>
+          {/* 底部虚影 */}
           <div className="indicator-position bgc-box">
             <div className=" indicator-bgc"></div>
           </div>
@@ -152,7 +156,8 @@ const HouseCover = memo((props) => {
 
 HouseCover.propTypes = {
   itemData: PropTypes.object,
-  width: PropTypes.string
+  width: PropTypes.string,
+  changeItemFn: PropTypes.func
 }
 
 export default HouseCover

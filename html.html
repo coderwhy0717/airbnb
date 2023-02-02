@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+       padding:0;
+        margin:0;
+    }
+    .div1{
+        position: relative;
+        height:200px;
+        width:200px;
+        background-color: pink;
+        overflow: hidden;
+    }
+    .div2{
+        position: absolute;
+        height:200px;
+        width:200px;
+        background-color: black;
+        opacity: .6;
+    }
+    .div3{
+        position: absolute;
+        height:50px;
+        width:200px;
+        background-color: firebrick;
+        bottom:-50px;
+          opacity: .6;
+    }
+    .div1:hover .div2{
+        opacity: 0;
+        transition: all .6s ease;
+    }
+    .div1:hover .div3{
+        bottom:0;
+        transition: all .6s ease;
+     }
+</style>
+<body>
+<div class="div1">
+    <div class="div2">
+    </div>
+    <div class="div3">
+    </div>
+</div>
+</body>
+</html>

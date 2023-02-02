@@ -13,7 +13,7 @@ const CitysBtns = memo((props) => {
   }
   return (
     <CitysBtnWrapper>
-      <ScrollView>
+      <ScrollView showBgc={1}>
         {citys.map((item, index) => {
           return (
             <div
