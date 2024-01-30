@@ -6,7 +6,7 @@ import {
   // changeCurrentPageAction,
   fetchEntireDataAction
 } from '@/store/modules/entire'
-import { useDispatch, useSelector } from 'react-redux'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 
 import { EntireWrapper } from './style'
 import LoadingAnimation from '@/components/loading-animation'
@@ -22,10 +22,13 @@ const Entire = memo(() => {
     // 请求数据
     dispatch(fetchEntireDataAction(3))
   }, [dispatch])
-  const { showEntireLoading, totalCount } = useSelector((state) => ({
-    showEntireLoading: state.entire.showEntireLoading,
-    totalCount: state.entire.totalCount
-  }))
+  const { showEntireLoading, totalCount } = useSelector(
+    (state) => ({
+      showEntireLoading: state.entire.showEntireLoading,
+      totalCount: state.entire.totalCount
+    }),
+    shallowEqual
+  )
 
   return (
     <EntireWrapper showEntireLoading={showEntireLoading} show={totalCount}>

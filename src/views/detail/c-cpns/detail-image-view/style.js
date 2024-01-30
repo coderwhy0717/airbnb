@@ -1,16 +1,22 @@
 import styled from 'styled-components'
 
 export const ImageViewWrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 60vh;
-  :hover {
-    /* 移动到了区域 显示 所有的背景 变化鼠标 手指*/
-    .cover-bgc {
-      opacity: 1;
+  .image-box {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    /* ${(props) => (props.isShow ? '' : 'margin-top:50px;')} */
+    transition: all 1s ease;
+    :hover {
+      /* 移动到了区域 显示 所有的背景 变化鼠标 手指*/
+      .cover-bgc {
+        opacity: 1;
+      }
     }
   }
+
   /* 定好 背景 */
   .cover-bgc {
     position: absolute;

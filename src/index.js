@@ -26,3 +26,12 @@ root.render(
   </Suspense>
   // </React.StrictMode>
 )
+
+const string = 'a,b,c,d,e,f,g'
+console.log(string.split(',').join('1'))
+
+const arr = []
+for (const item of string) {
+  arr.push(item)
+}
+console.log(arr)

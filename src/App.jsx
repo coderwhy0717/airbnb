@@ -9,6 +9,8 @@ const App = memo(() => {
       <AppHead />
       <div>{useRoutes(routes)}</div>
       <AppFooter />
+      <AppFooter />
+      <AppFooter />
     </Fragment>
   )
 })

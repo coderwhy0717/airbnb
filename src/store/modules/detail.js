@@ -1,23 +1,30 @@
-const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const fetchDetailAction = createAsyncThunk(
-  "detail",
+  'detail',
   (payload, { dispatch, getState }) => {}
-);
+)
 
 const detailSlice = createSlice({
-  name: "detail",
+  name: 'detail',
   initialState: {
     houseDetail: {},
+    isShowAppHead: true
   },
   reducers: {
     changeHouseDetailAction(state, { payload }) {
-      state.houseDetail = payload;
-      console.log(payload);
+      state.houseDetail = payload
+      console.log(payload)
     },
-  },
-});
+    changeIsShowAppHead(state, { payload }) {
+      console.log(payload, 'store')
 
-export const { changeHouseDetailAction } = detailSlice.actions;
+      state.isShowAppHead = payload
+    }
+  }
+})
 
-export default detailSlice.reducer;
+export const { changeHouseDetailAction, changeIsShowAppHead } =
+  detailSlice.actions
+
+export default detailSlice.reducer

@@ -20,7 +20,7 @@ const EntireContent = memo((props) => {
   let arr = useRef({ 0: 0, 1: 0, 2: 0 })
   const changeclick = (index) => {
     const indexs = Object.keys(arr.current)
-    const newKey = indexs.find((item) => item == index)
+    const newKey = indexs.find((item) => item === index)
     currentInstaceRef.current = newKey
     console.log(newKey)
     console.log(arr.current[newKey]++, 'key')

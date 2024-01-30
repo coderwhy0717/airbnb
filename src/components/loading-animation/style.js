@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const LoadingAnimationWarpper = styled.div`
-  /* ${(props) =>
-    props.showEntireLoading ? 'display: none;' : 'display: block;'} */
   position: absolute;
   top: 53px;
   bottom: 0;
@@ -10,8 +8,13 @@ export const LoadingAnimationWarpper = styled.div`
   right: 0;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  line-height: 100vh;
-  z-index: 999;
+  height: auto;
+  z-index: 9999999;
+  /* 滚动粘着顶部 固定 相当于 fixed */
+  .masking {
+    position: sticky;
+    top: 50%;
+  }
   .load {
     display: inline-block;
     width: 12px;

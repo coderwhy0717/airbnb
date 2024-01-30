@@ -4,6 +4,8 @@ import { IndicatorWrapper } from './style'
 
 const IndicatorView = memo((props) => {
   const { currentIndex = 0, width = 50, aotuHeight = true } = props
+  console.log(props, 'props')
+
   const itemRef = useRef()
 
   useEffect(() => {

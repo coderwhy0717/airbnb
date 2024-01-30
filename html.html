@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<style>
-    *{
-       padding:0;
-        margin:0;
-    }
-    .div1{
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        margin-top: 100px;
+        width: 500px;
+        height: 100px;
+        border-top: 1px solid blue;
         position: relative;
-        height:200px;
-        width:200px;
-        background-color: pink;
-        overflow: hidden;
-    }
-    .div2{
+        background-color: blue;
+      }
+      .b {
+        width: 200px;
+        height: 20px;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-top: 11px solid white;
         position: absolute;
-        height:200px;
-        width:200px;
-        background-color: black;
-        opacity: .6;
-    }
-    .div3{
-        position: absolute;
-        height:50px;
-        width:200px;
-        background-color: firebrick;
-        bottom:-50px;
-          opacity: .6;
-    }
-    .div1:hover .div2{
-        opacity: 0;
-        transition: all .6s ease;
-    }
-    .div1:hover .div3{
-        bottom:0;
-        transition: all .6s ease;
-     }
-</style>
-<body>
-<div class="div1">
-    <div class="div2">
+        top: -1px;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div class="b"></div>
     </div>
-    <div class="div3">
-    </div>
-</div>
-</body>
+  </body>
 </html>

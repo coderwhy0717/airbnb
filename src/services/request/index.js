@@ -19,7 +19,7 @@ class WYRequest {
     )
     this.instance.interceptors.response.use(
       (res) => {
-        console.log('全局响应成功')
+        console.log(res, '全局响应成功')
 
         return res
       },

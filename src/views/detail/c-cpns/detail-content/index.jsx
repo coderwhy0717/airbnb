@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
-import React, { memo } from "react";
+import PropTypes from 'prop-types'
+import React, { memo } from 'react'
 
 const DetailContent = memo((props) => {
-  return <div>DetailContent</div>;
-});
+  return <div>aa</div>
+})
 
-DetailContent.propTypes = {};
+DetailContent.propTypes = {}
 
-export default DetailContent;
+export default DetailContent

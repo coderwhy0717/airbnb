@@ -1,21 +1,29 @@
 import styled from 'styled-components'
 
 export const NotFoundWrapper = styled.div`
-  background-color: ${(props) => props.theme.color.secondaryColor};
-  color: #fff;
-  .box {
-    width: 200px;
-    height: 200px;
-    margin: 100px auto;
-    box-shadow: 0px 0px 2px ${(props) => props.theme.color.secondaryColor};
-    border-radius: 10px;
-    transition: all 500ms ease;
-    text-align: center;
-    :hover {
-      transform: translateY(-50px);
-      box-shadow: 0px 0px 2px red;
-      color: #000;
-      cursor: pointer;
+  #vID {
+    width: 250px;
+    height: 250px;
+  }
+  img {
+    width: 768px;
+    height: 432px;
+    object-fit: contain;
+  }
+  video::cue {
+    background-color: transparent;
+    color: yellow;
+    font-size: 20px;
+    text-shadow: peachpuff 0 1px;
+  }
+
+  video::cue(c.mn) {
+    color: #fff;
+    text-shadow: peachpuff 0 1px;
+  }
+  label {
+    /* display: flex; */
+    text {
     }
   }
 `
